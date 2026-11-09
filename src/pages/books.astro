@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import books from "../data/books.json";
+
+const years = [...new Set(books.map((b) => b.year))].sort((a, b) => b - a);
+---
+
+<Base title="Books" current="books" description="Books Sheriff Alimi has read.">
+  <h1>Books</h1>
+  <p class="lede-small">What I've read, newest first. The ones with notes stayed with me.</p>
+  {
+    years.map((year) => (
+      <section class="year">
+        <h2>{year}</h2>
+        <ul class="books">
+          {books
+            .filter((b) => b.year === year)
+            .map((b) => (
+              <li>
+                <span class="book-title">
+                  {b.url ? <a href={b.url}>{b.title}</a> : b.title}
+                </span>{" "}
+                <span class="meta">by {b.author}</span>
+                {b.note && <p class="note">{b.note}</p>}
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

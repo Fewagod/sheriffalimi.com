@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+import elsewhere from "../../data/elsewhere.json";
+import { getPosts, formatDate } from "../../lib/posts";
+
+const posts = await getPosts();
+---
+
+<Base title="Writing" current="writing" description="Essays and notes by Sheriff Alimi.">
+  <h1>Writing</h1>
+  <ul class="entries">
+    {
+      posts.map((p) => (
+        <li>
+          <a href={`/writing/${p.id}`}>{p.data.title}</a>
+          <span class="meta">{formatDate(p.data.date)}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2 class="section-title">Elsewhere</h2>
+  <ul class="entries">
+    {
+      elsewhere.map((e) => (
+        <li>
+          <a href={e.url}>{e.title}</a>
+          <span class="meta">{e.publication}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

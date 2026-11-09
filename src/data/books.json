@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Your first book",
+    "author": "Author name",
+    "year": 2026,
+    "note": "One line on why it stayed with you. Notes are optional.",
+    "url": ""
+  },
+  {
+    "title": "Another book",
+    "author": "Author name",
+    "year": 2026,
+    "note": "",
+    "url": ""
+  },
+  {
+    "title": "A book from last year",
+    "author": "Author name",
+    "year": 2025,
+    "note": "Books are grouped by the year you read them.",
+    "url": ""
+  }
+]

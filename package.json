@@ -1,0 +1,24 @@
+{
+  "name": "sheriffalimi-com",
+  "version": "1.0.0",
+  "description": "sheriffalimi.com",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "deploy": "astro build && wrangler deploy",
+    "preview": "astro build && wrangler dev",
+    "preview:plain": "SITE_THEME=plain PREVIEW=1 OUT_DIR=./preview/plain astro build && node scripts/relativize.mjs preview/plain",
+    "preview:adire": "SITE_THEME=adire PREVIEW=1 OUT_DIR=./preview/adire astro build && node scripts/relativize.mjs preview/adire"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@fontsource-variable/literata": "^5.3.0",
+    "@fontsource-variable/schibsted-grotesk": "^5.3.0",
+    "astro": "^7.4.8"
+  },
+  "devDependencies": {
+    "wrangler": "^4.159.0"
+  },
+  "private": true,
+  "type": "module"
+}

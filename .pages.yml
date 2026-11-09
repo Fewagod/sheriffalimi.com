@@ -1,0 +1,103 @@
+# Pages CMS (https://pagescms.org): a browser editor for this site.
+# Sign in with GitHub, pick this repository, and these menus appear.
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: writing
+    label: Writing
+    type: collection
+    path: src/content/writing
+    filename: "{fields.title}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: One-line summary
+        type: string
+        description: Shown in search results and link previews.
+      - name: draft
+        label: Draft (hidden from the site)
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: books
+    label: Books
+    type: file
+    path: src/data/books.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: author
+        label: Author
+        type: string
+      - name: year
+        label: Year read
+        type: number
+      - name: note
+        label: Note (optional)
+        type: text
+      - name: url
+        label: Link (optional)
+        type: string
+
+  - name: work
+    label: Work history
+    type: file
+    path: src/data/work.json
+    format: json
+    list: true
+    fields:
+      - name: org
+        label: Organisation
+        type: string
+        required: true
+      - name: url
+        label: Website (optional)
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: when
+        label: When (write "Now" to show it on the home page)
+        type: string
+      - name: description
+        label: Description
+        type: text
+
+  - name: elsewhere
+    label: Writing elsewhere
+    type: file
+    path: src/data/elsewhere.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: publication
+        label: Publication
+        type: string
+      - name: url
+        label: Link
+        type: string

@@ -1,0 +1,99 @@
+/* Plain: a page of text and blue links, in the spirit of nat.org and patrickcollison.com */
+
+:root {
+  --text: #000;
+  --muted: #555;
+  --link: #0645ad;
+  --visited: #5a3696;
+  --rule: #ddd;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
+}
+
+.page {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:visited { color: var(--visited); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.masthead .name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; }
+nav a[aria-current="page"] { color: var(--text); text-decoration: none; }
+
+h1 { font-size: 1.5rem; font-weight: bold; margin: 0 0 1.25rem; line-height: 1.3; }
+h2 { font-size: 1.125rem; font-weight: bold; margin: 2.25rem 0 0.5rem; }
+
+p { margin: 0 0 1rem; }
+
+.lede { font-size: 1.125rem; }
+.lede-small { color: var(--muted); }
+.meta { color: var(--muted); font-size: 0.95rem; }
+
+.plain-list, .entries, .books, .work { margin: 0; padding-left: 1.2rem; }
+.plain-list li, .entries li, .books li { margin-bottom: 0.4rem; }
+.entries .meta::before { content: ", "; }
+
+.inline-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+
+.work { list-style: none; padding: 0; }
+.work li { margin-bottom: 1.75rem; }
+.work h2 { margin: 0; font-size: 1.125rem; }
+.work .meta { margin: 0 0 0.25rem; font-style: italic; }
+.work .when::before { content: ", "; }
+
+.section-title { margin-top: 2.5rem; }
+
+.year h2 { margin-top: 2rem; }
+.books .note { margin: 0.1rem 0 0; color: var(--muted); font-size: 1rem; }
+
+.post .meta { margin-top: -0.75rem; margin-bottom: 1.75rem; }
+.prose ul { padding-left: 1.2rem; }
+.prose li { margin-bottom: 0.3rem; }
+.prose blockquote { margin: 1.25rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+.prose img { max-width: 100%; height: auto; }
+.prose pre { overflow-x: auto; font-size: 0.9rem; background: #f6f6f6; padding: 0.75rem; }
+
+.more { margin-top: 1rem; }
+
+.colophon {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.95rem;
+}

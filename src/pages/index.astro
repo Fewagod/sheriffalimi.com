@@ -1,0 +1,77 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../config";
+import work from "../data/work.json";
+import { getPosts, formatDate } from "../lib/posts";
+
+const now = work.filter((w) => w.when === "Now");
+const posts = (await getPosts()).slice(0, 5);
+const l = site.links;
+const links = [
+  l.email && { label: "Email", href: `mailto:${l.email}`, text: l.email },
+  l.linkedin && { label: "LinkedIn", href: l.linkedin },
+  l.x && { label: "X", href: l.x },
+  l.techSafari && { label: "Tech Safari", href: l.techSafari },
+  l.nextCapital && { label: "Next Capital", href: l.nextCapital },
+].filter(Boolean) as { label: string; href: string; text?: string }[];
+---
+
+<Base current="home">
+  <section class="intro">
+    <p class="lede">
+      I invest in, write about and build technology across Africa.
+    </p>
+    <p>
+      I trained as a pharmacist, then spent the last few years around African startups. I
+      backed them at Ventures Platform and Next Capital, wrote about
+      them for Tech Safari, and helped start a few. I'm now an MBA student at Imperial
+      College Business School in London.
+    </p>
+  </section>
+
+  <section>
+    <h2>Now</h2>
+    <ul class="plain-list">
+      <li>Studying for an MBA at Imperial College Business School.</li>
+      {
+        now.map((w) => (
+          <li>
+            {w.url ? <a href={w.url}>{w.org}</a> : <strong>{w.org}</strong>}.{" "}
+            {w.description.split(". ")[0].replace(/\.$/, "")}.
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recent writing</h2>
+    <ul class="entries">
+      {
+        posts.map((p) => (
+          <li>
+            <a href={`/writing/${p.id}`}>{p.data.title}</a>
+            <span class="meta">{formatDate(p.data.date)}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="more"><a href="/writing">All writing</a></p>
+  </section>
+
+  {
+    links.length > 0 && (
+      <section>
+        <h2>Elsewhere</h2>
+        <ul class="inline-list">
+          {links.map((x) => (
+            <li>
+              <a href={x.href}>{x.label}</a>
+              {x.text && <span class="meta"> {x.text}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Base>

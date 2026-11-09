@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import work from "../data/work.json";
+import education from "../data/education.json";
+---
+
+<Base title="Work" current="work" description="Sheriff Alimi's work history.">
+  <h1>Work</h1>
+  <ol class="work">
+    {
+      work.map((w) => (
+        <li>
+          <h2>
+            {w.url ? <a href={w.url}>{w.org}</a> : w.org}
+          </h2>
+          <p class="meta">
+            {w.role}
+            {w.when && <span class="when">{w.when}</span>}
+          </p>
+          <p>{w.description}</p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <h2 class="section-title">Education</h2>
+  <ul class="plain-list">
+    {
+      education.map((e) => (
+        <li>
+          <strong>{e.school}</strong>. {e.detail}
+        </li>
+      ))
+    }
+  </ul>
+</Base>
