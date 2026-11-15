@@ -2,28 +2,31 @@
 import Base from "../layouts/Base.astro";
 import books from "../data/books.json";
 
-const years = [...new Set(books.map((b) => b.year))].sort((a, b) => b - a);
+type Book = { title: string; author?: string; year?: number; note?: string; url?: string };
+const all = books as Book[];
+const years = [...new Set(all.filter((b) => b.year).map((b) => b.year!))].sort((a, b) => b - a);
+const groups = years.map((year) => ({ label: String(year), items: all.filter((b) => b.year === year) }));
+const undated = all.filter((b) => !b.year);
+if (undated.length) groups.push({ label: "Other books", items: undated });
 ---
 
 <Base title="Books" current="books" description="Books Sheriff Alimi has read.">
   <h1>Books</h1>
   <p class="lede-small">What I've read, newest first. The ones with notes stayed with me.</p>
   {
-    years.map((year) => (
+    groups.map((group) => (
       <section class="year">
-        <h2>{year}</h2>
+        <h2>{group.label}</h2>
         <ul class="books">
-          {books
-            .filter((b) => b.year === year)
-            .map((b) => (
-              <li>
-                <span class="book-title">
-                  {b.url ? <a href={b.url}>{b.title}</a> : b.title}
-                </span>{" "}
-                <span class="meta">by {b.author}</span>
-                {b.note && <p class="note">{b.note}</p>}
-              </li>
-            ))}
+          {group.items.map((b) => (
+            <li>
+              <span class="book-title">
+                {b.url ? <a href={b.url}>{b.title}</a> : b.title}
+              </span>
+              {b.author && <span class="meta"> by {b.author}</span>}
+              {b.note && <p class="note">{b.note}</p>}
+            </li>
+          ))}
         </ul>
       </section>
     ))
