@@ -1,0 +1,14 @@
+{
+  "headline": "I invest in, write about and build technology across Africa.",
+  "intro": "<p>I trained as a pharmacist, then spent the last few years around African startups. I backed them at Ventures Platform and Next Capital, wrote about them for Tech Safari, and helped start a few. I'm now an MBA student at Imperial College Business School in London.</p>",
+  "now": [
+    "Studying for an MBA at Imperial College Business School."
+  ],
+  "showWorkInNow": true,
+  "elsewhere": [
+    {
+      "label": "Tech Safari",
+      "url": "https://techsafari.beehiiv.com/authors/sheriff-alimi"
+    }
+  ]
+}

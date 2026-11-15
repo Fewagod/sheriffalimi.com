@@ -6,6 +6,40 @@ media:
   output: /images
 
 content:
+  - name: home
+    label: Home page
+    type: file
+    path: src/data/home.json
+    format: json
+    fields:
+      - name: headline
+        label: Headline (the large first line)
+        type: string
+      - name: intro
+        label: Intro
+        type: rich-text
+      - name: now
+        label: '"Now" items'
+        description: One line each. Work entries marked "Now" are added after these automatically.
+        type: string
+        list: true
+      - name: showWorkInNow
+        label: Show work entries marked "Now"
+        type: boolean
+        default: true
+      - name: elsewhere
+        label: Elsewhere links
+        description: For email, use mailto:you@example.com as the link.
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: Link
+            type: string
+
   - name: writing
     label: Writing
     type: collection

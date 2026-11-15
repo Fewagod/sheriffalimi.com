@@ -11,8 +11,8 @@ My personal site. Built with [Astro](https://astro.build), hosted on Cloudflare 
 | Work history | `src/data/work.json` (anything with `"when": "Now"` also shows on the home page) |
 | Education | `src/data/education.json` |
 | Writing elsewhere | `src/data/elsewhere.json` |
-| Home page text | `src/pages/index.astro` |
-| Contact links, theme | `src/config.ts` |
+| Home page text, Now list, links | `src/data/home.json` (Pages CMS: Home page) |
+| Theme | `src/config.ts` |
 | Look and feel | `public/themes/adire.css` or `public/themes/plain.css` |
 
 ## Publishing an article
