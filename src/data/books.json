@@ -1,23 +1,190 @@
 [
   {
-    "title": "Your first book",
-    "author": "Author name",
-    "year": 2026,
-    "note": "One line on why it stayed with you. Notes are optional.",
-    "url": ""
+    "title": "The Prosperity Paradox",
+    "author": "Clayton Christenen, Efosa Ojomo, Karen Dillon",
+    "year": 2021,
+    "note": "I consider it my life's work to making my home continent prosperous, and this book lays out a good map on how to do it."
   },
   {
-    "title": "Another book",
-    "author": "Author name",
-    "year": 2026,
-    "note": "",
-    "url": ""
+    "title": "The Idea factory",
+    "author": "Jon Gertner",
+    "year": 2017
   },
   {
-    "title": "A book from last year",
-    "author": "Author name",
-    "year": 2025,
-    "note": "Books are grouped by the year you read them.",
-    "url": ""
+    "title": "The Adweek Copywriting Handbook",
+    "author": "Joseph Sugarman",
+    "year": 2021,
+    "note": "Clear writing is a superpower. This is the best book I know on how to write simply and clearly."
+  },
+  {
+    "title": "How to Fail at Everything and Still Win Big",
+    "author": "Scott Adams",
+    "year": 2022,
+    "note": "Most self-help books are unhelpful. This one is the exact opposite. It's filled with so many important ideas like choosing systems over goals, focusing on energy over everything else, and building a talent stack that truly differentiates you."
+  },
+  {
+    "title": "Space Chronicles: Facing the Ultimate Frontier",
+    "author": "Neil DeGrasse Tyson, Avis Lang",
+    "year": 2017
+  },
+  {
+    "title": "Physics of the Impossible",
+    "author": "Michio Kaku",
+    "year": 2016
+  },
+  {
+    "title": "Physics of the Future",
+    "author": "Michio Kaku",
+    "year": 2016
+  },
+  {
+    "title": "Design Engineering Handbook",
+    "author": "InVision",
+    "year": 2019
+  },
+  {
+    "title": "Reclaiming Childhood: Freedom and Play in the Age of Fear",
+    "author": "Helen Guldberg",
+    "year": 2018
+  },
+  {
+    "title": "Human, All too Human",
+    "author": "Friedrich Nietzsche",
+    "year": 2019
+  },
+  {
+    "title": "The Fear of Freedom",
+    "author": "Erich Fromm",
+    "year": 2021
+  },
+  {
+    "title": "The Art of Loving",
+    "author": "Erich Fromm",
+    "year": 2022
+  },
+  {
+    "title": "The Intelligent Investor",
+    "author": "Warren E. Buffet, Benjamin Graham, Jason Zweig",
+    "year": 2017
+  },
+  {
+    "title": "Bed of Procrustes",
+    "author": "Nassim Nicholas Taleb",
+    "year": 2022
+  },
+  {
+    "title": "Disciplined Entrepreneurship",
+    "author": "Bill Aulet"
+  },
+  {
+    "title": "The Untethered Soul",
+    "author": "Micheal A. Singer"
+  },
+  {
+    "title": "Hackers & Painters",
+    "author": "Paul Graham",
+    "year": 2025
+  },
+  {
+    "title": "Games People Play",
+    "author": "Eric Berne, PhD.",
+    "year": 2024
+  },
+  {
+    "title": "The Artist's Way",
+    "author": "Julia Cameron",
+    "year": 2026
+  },
+  {
+    "title": "Invent & Wander: The Collected Writings of Jeff Bezos",
+    "author": "Walter Isaacson",
+    "year": 2023
+  },
+  {
+    "title": "The Making of Price of Persia",
+    "author": "Jordan Mechner",
+    "year": 2021
+  },
+  {
+    "title": "Anatomy of the Swipe",
+    "author": "Ahmed Siddiqui",
+    "year": 2024
+  },
+  {
+    "title": "The Corporation in the 21st Century",
+    "author": "John Kay",
+    "year": 2023
+  },
+  {
+    "title": "Mathematica: A Secret World of Intuition and Curiosity",
+    "author": "David Bessis",
+    "year": 2002
+  },
+  {
+    "title": "Why Greatness Cannot Be Planned: The Myth of the Objective",
+    "author": "Kenneth O. Stanley, Joel Lehman",
+    "year": 2024
+  },
+  {
+    "title": "Little, Big",
+    "author": "John Crowley",
+    "year": 2009
+  },
+  {
+    "title": "\"All I Want to Know is Where I'm Going to Die, So I Never Go There\"",
+    "author": "Peter Bevelin"
+  },
+  {
+    "title": "Status and Culture",
+    "author": "David Marx"
+  },
+  {
+    "title": "The Alter Ego Effect",
+    "author": "Todd Herman"
+  },
+  {
+    "title": "Reframe Your Brain",
+    "author": "Scott Adams",
+    "year": 2025
+  },
+  {
+    "title": "Win Bigly",
+    "author": "Scott Adams",
+    "year": 2024
+  },
+  {
+    "title": "How to Get Rich",
+    "author": "Felix Dennis",
+    "year": 2024
+  },
+  {
+    "title": "How Will You Measure Your Life?",
+    "author": "Clayton Christensen",
+    "year": 2021
+  },
+  {
+    "title": "Build: An Unorthodox Guide to Making Things Worth Making",
+    "author": "Tony Fadell",
+    "year": 2022
+  },
+  {
+    "title": "Poor Charlie's Almanack",
+    "author": "Charles T. Munger, Peter D. Kaufman",
+    "year": 2023
+  },
+  {
+    "title": "Antifragile: Things That Gain From Disorder",
+    "author": "Nassim Nicholas Taleb",
+    "year": 2020
+  },
+  {
+    "title": "The Black Swan",
+    "author": "Nassim Nicholas Taleb",
+    "year": 2005
+  },
+  {
+    "title": "Four Thousand Weeks",
+    "author": "Oliver Burkeman",
+    "year": 2023
   }
 ]
